@@ -1,0 +1,2157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KontactoYa</title>
+  <meta name="description" content="Contact center líder en LATAM. Atención 24/7, televentas y cobranza." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="KontactoYa Logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- LOADER -->
+  <div id="loader" aria-hidden="false">
+    <div class="loader-circle"></div>
+    <div class="loader-logo">
+      <span class="gradient-text" data-colors='["#ff0088", "#ff66cc", "#8b5cf6"]'>KY</span>
+    </div>
+  </div>
+
+  <!-- NAVBAR TRANSLÚCIDO -->
+  <header class="navbar" role="banner" id="siteHeader">
+    <div class="logo gradient-text" data-colors='["#ff0088", "#ff66cc", "#8b5cf6"]' data-speed="4">KONTACTOYA</div>
+    <nav role="navigation" aria-label="principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#kpis">KPIs</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#trabaja">Trabaja</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="cta neon glow" onclick="scrollToSection('contacto')">Contratar Ahora</button>
+  </header>
+
+  <!-- MAIN -->
+  <main id="mainContent" role="main">
+
+    <!-- HERO CON IMAGEN CAMBIABLE -->
+    <section class="hero section" id="inicio" aria-label="intro">
+      <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+      <!-- IMAGEN DE FONDO PERSONALIZABLE - Cambia esta URL a tu imagen -->
+      <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=85');" aria-hidden="true"></div>
+
+      <div class="hero-image-overlay" aria-hidden="true"></div>
+
+      <div class="hero-content container">
+        <h1 class="hero-title">
+          <span class="line animate-slide-up" style="animation-delay:0.2s">Conectamos personas,</span>
+          <span class="line animate-slide-up gradient-text" data-colors='["#ff0088", "#ff66cc", "#ffaa00", "#8b5cf6"]' data-speed="4" style="animation-delay:0.4s">impulsamos resultados.</span>
+        </h1>
+        <p class="hero-sub animate-fade-in" style="animation-delay:0.6s">
+          Atención, ventas y soporte omnicanal con el toque humano que marca la diferencia.
+        </p>
+        <div class="hero-ctas animate-fade-in" style="animation-delay:0.8s">
+          <button class="cta glow pulse-shadow" onclick="scrollToSection('kpis')">Ver Resultados</button>
+          <button class="cta" onclick="scrollToSection('servicios')">Nuestros Servicios</button>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="hero-social animate-fade-in" style="animation-delay:1s">
+          <a href="https://instagram.com/kontactoya" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/51987654321?text=Hola%20KONTACTOYA%2C%20quiero%20información" target="_blank" rel="noopener" class="social-btn whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://facebook.com/kontactoya" target="_blank" rel="noopener" class="social-btn facebook-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="features section" aria-label="Nuestros servicios">
+      <div class="container">
+        <h2 class="section-title fade-up">
+          <span class="gradient-text" data-colors='["#ff0088", "#ff66cc", "#8b5cf6"]' data-speed="5">Nuestros Servicios</span>
+        </h2>
+        <p class="section-sub fade-up">Soluciones especializadas en atención, ventas y recuperación con enfoque humano y tecnología.</p>
+
+        <div class="services-grid" role="list">
+
+          <!-- Atención al Cliente 24/7 -->
+          <article class="service-card fade-up stagger-item smooth-hover" role="listitem" tabindex="0" data-service="atencion">
+
+            <div class="service-media">
+              <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=800&q=80" alt="Atención al Cliente 24/7" loading="lazy" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-summary">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Atención al Cliente 24/7</h3>
+              <p class="mini">Soporte 24/7 multicanal que humaniza cada interacción.</p>
+            </div>
+
+            <div class="service-full" aria-hidden="true">
+              <p class="lead">Agentes entrenados, SLAs medibles y QA continuo. Manejamos consultas, escalados y retención operativa con reportes en tiempo real.</p>
+              <ul class="bullets">
+                <li>Soporte omnicanal (teléfono, chat, email, WhatsApp)</li>
+                <li>SLA garantizado y procesos auditables</li>
+                <li>Calidad por monitores y coaching continuo</li>
+                <li>Dashboard en tiempo real con métricas clave</li>
+              </ul>
+              <button class="service-cta cta" type="button" onclick="scrollToSection('contacto')">Solicitar cotización</button>
+            </div>
+          </article>
+
+          <!-- Televentas & Retención -->
+          <article class="service-card fade-up" role="listitem" tabindex="0" data-service="televentas">
+            <div class="service-media">
+              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="Televentas" loading="lazy" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-summary">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  <polyline points="17 6 23 6 23 12"></polyline>
+                </svg>
+              </div>
+              <h3>Televentas & Retención</h3>
+              <p class="mini">Equipos especializados en conversión y fidelización.</p>
+            </div>
+
+            <div class="service-full" aria-hidden="true">
+              <p class="lead">Estrategias de ventas consultivas + recupero de clientes. A/B testing de scripts y coaching para mejorar tasas de conversión.</p>
+              <ul class="bullets">
+                <li>Campañas multicanal y segmentación por valor</li>
+                <li>KPIs: conversiones, CPL, retención y LTV</li>
+                <li>Coaching y optimización continua</li>
+                <li>CRM integrado con reportes detallados</li>
+              </ul>
+              <button class="service-cta cta" type="button" onclick="scrollToSection('contacto')">Hablemos de campañas</button>
+            </div>
+          </article>
+
+          <!-- Gestión de Cobranza -->
+          <article class="service-card fade-up" role="listitem" tabindex="0" data-service="cobranza">
+            <div class="service-media">
+              <img src="https://images.unsplash.com/photo-1554224311-beee4392ef68?auto=format&fit=crop&w=800&q=80" alt="Cobranza" loading="lazy" />
+              <div class="service-overlay"></div>
+            </div>
+            <div class="service-summary">
+              <div class="service-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="12" y1="1" x2="12" y2="23"></line>
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+              </div>
+              <h3>Gestión de Cobranza</h3>
+              <p class="mini">Recuperación efectiva con enfoque humano y resultados medibles.</p>
+            </div>
+
+            <div class="service-full" aria-hidden="true">
+              <p class="lead">Conversaciones segmentadas por riesgo, seguimiento automatizado y negociación humana que prioriza recuperación sin dañar la relación cliente-marca.</p>
+              <ul class="bullets">
+                <li>Segmentación por comportamiento y scoring</li>
+                <li>Scripts de contacto empáticos y efectivos</li>
+                <li>Opciones de pago flexibles y reporting por campaña</li>
+                <li>Cumplimiento normativo garantizado</li>
+              </ul>
+              <button class="service-cta cta" type="button" onclick="scrollToSection('contacto')">Ver soluciones de cobranza</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KPIs HORIZONTALES MEJORADOS -->
+    <section id="kpis" class="kpi-block section" aria-label="KPIs y resultados">
+      <div class="overlay-kpi" id="kpiOverlay"></div>
+      <div class="container">
+        <div class="glass-container fade-up">
+          <div class="kpi-header">
+            <h2 class="section-title">
+              <span class="gradient-text" data-colors='["#40ffaa", "#4079ff", "#ff0088", "#40ffaa"]' data-speed="6">Resultados que Hablan</span>
+            </h2>
+            <p class="section-sub">Transparencia y métricas reales que muestran el impacto.</p>
+          </div>
+
+          <div class="kpi-grid-horizontal" role="list">
+
+            <!-- KPI 1: CSAT con gráfico circular -->
+            <div class="kpi-card-horizontal fade-up scale-in stagger-item" data-id="kpi-1" role="listitem" tabindex="0">
+
+              <div class="kpi-visual">
+                <div class="kpi-chart-circular">
+                  <svg viewBox="0 0 120 120" class="circular-chart">
+                    <circle class="circle-bg" cx="60" cy="60" r="50"></circle>
+                    <circle class="circle-progress" cx="60" cy="60" r="50" data-percent="94"></circle>
+                  </svg>
+                  <div class="chart-center">
+                    <span class="chart-value" data-target="94">0</span>
+                    <span class="chart-suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kpi-info">
+                <div class="kpi-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h3 class="kpi-title">CSAT</h3>
+                <p class="kpi-desc">Satisfacción del cliente</p>
+                <div class="kpi-trend up">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  </svg>
+                  <span>+5% este mes</span>
+                </div>
+              </div>
+              <div class="kpi-detail">
+                <p>Satisfacción promedio del 94% en programas 24/7 con monitoreo constante y coaching que mantienen la calidad alta en cada interacción con nuestros clientes.</p>
+              </div>
+            </div>
+
+            <!-- KPI 2: FCR con barra de progreso -->
+            <div class="kpi-card-horizontal fade-up" data-id="kpi-2" role="listitem" tabindex="0">
+              <div class="kpi-visual">
+                <div class="kpi-chart-bar">
+                  <div class="bar-container">
+                    <div class="bar-fill" data-percent="90"></div>
+                  </div>
+                  <div class="bar-labels">
+                    <span>0%</span>
+                    <span>50%</span>
+                    <span>100%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kpi-info">
+                <div class="kpi-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <h3 class="kpi-title"><span data-target="90">0</span>%</h3>
+                <p class="kpi-desc">First Call Resolution</p>
+                <div class="kpi-trend up">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  </svg>
+                  <span>+3% vs mes anterior</span>
+                </div>
+              </div>
+              <div class="kpi-detail">
+                <p>Resolución en primera llamada elevada gracias a diagnóstico guiado y acceso a base de conocimientos en tiempo real, reduciendo llamadas repetidas.</p>
+              </div>
+            </div>
+
+            <!-- KPI 3: Interacciones con gráfico de columnas -->
+            <div class="kpi-card-horizontal fade-up" data-id="kpi-3" role="listitem" tabindex="0">
+              <div class="kpi-visual">
+                <div class="kpi-chart-columns">
+                  <div class="column" style="--height:85%" data-value="Ene">
+                    <div class="column-fill"></div>
+                  </div>
+                  <div class="column" style="--height:72%" data-value="Feb">
+                    <div class="column-fill"></div>
+                  </div>
+                  <div class="column" style="--height:95%" data-value="Mar">
+                    <div class="column-fill"></div>
+                  </div>
+                  <div class="column" style="--height:68%" data-value="Abr">
+                    <div class="column-fill"></div>
+                  </div>
+                  <div class="column" style="--height:88%" data-value="May">
+                    <div class="column-fill"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="kpi-info">
+                <div class="kpi-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  </svg>
+                </div>
+                <h3 class="kpi-title"><span data-target="1800">0</span>K+</h3>
+                <p class="kpi-desc">Interacciones mensuales</p>
+                <div class="kpi-trend up">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  </svg>
+                  <span>Crecimiento sostenido</span>
+                </div>
+              </div>
+              <div class="kpi-detail">
+                <p>Más de 1.8 millones de interacciones mensuales combinando teléfono, chat y WhatsApp en operaciones medianas y grandes con crecimiento constante.</p>
+              </div>
+            </div>
+
+            <!-- KPI 4: Países con imágenes -->
+            <div class="kpi-card-horizontal fade-up" data-id="kpi-4" role="listitem" tabindex="0">
+              <div class="kpi-visual">
+                <div class="kpi-chart-flags">
+                  <div class="flag-item">
+                    <img src="https://flagcdn.com/w160/pe.png" alt="Perú" />
+                  </div>
+                  <div class="flag-item">
+                    <img src="https://flagcdn.com/w160/es.png" alt="España" />
+                  </div>
+                  <div class="flag-item">
+                    <img src="https://flagcdn.com/w160/cl.png" alt="Chile" />
+                  </div>
+                </div>
+              </div>
+              <div class="kpi-info">
+                <div class="kpi-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <h3 class="kpi-title"><span data-target="3">0</span></h3>
+                <p class="kpi-desc">Países de operación</p>
+                <div class="kpi-trend">
+                  <span>Perú, España, Chile</span>
+                </div>
+              </div>
+              <div class="kpi-detail">
+                <p>Presencia estratégica en 3 países con equipos locales capacitados, infraestructura robusta y reportes consolidados en tiempo real.</p>
+              </div>
+            </div>
+
+            <!-- KPI 5: Conversión con gauge -->
+            <div class="kpi-card-horizontal fade-up" data-id="kpi-5" role="listitem" tabindex="0">
+              <div class="kpi-visual">
+                <div class="kpi-chart-gauge">
+                  <svg viewBox="0 0 120 80" class="gauge-chart">
+                    <path class="gauge-bg" d="M 10,70 A 50,50 0 0,1 110,70"></path>
+                    <path class="gauge-progress" d="M 10,70 A 50,50 0 0,1 110,70" data-percent="12"></path>
+                  </svg>
+                  <div class="gauge-center">
+                    <span class="gauge-value" data-target="12">0</span>
+                    <span class="gauge-suffix">%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="kpi-info">
+                <div class="kpi-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                  </svg>
+                </div>
+                <h3 class="kpi-title">Conversión</h3>
+                <p class="kpi-desc">Tasa de cierre en ventas</p>
+                <div class="kpi-trend up">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                  </svg>
+                  <span>+2% optimización continua</span>
+                </div>
+              </div>
+              <div class="kpi-detail">
+                <p>Tasa de conversión del 12% en campañas optimizadas con pruebas A/B de scripts, seguimiento en CRM y coaching continuo del equipo comercial.</p>
+              </div>
+            </div>
+
+            <!-- KPI 6: AHT mejorado con visualización -->
+            <div class="kpi-card-horizontal fade-up" data-id="kpi-6" role="listitem" tabindex="0">
+              <div class="kpi-visual">
+                <div class="kpi-chart-timer">
+                  <div class="timer-circle">
+                    <svg viewBox="0 0 120 120">
+                      <circle class="timer-bg" cx="60" cy="60" r="50"></circle>
+                      <circle class="timer-progress" cx="60" cy="60" r="50"></circle>
+                    </svg>
+                    <div class="timer-center">
+                      <span class="timer-value" data-target="320">0</span>
+                      <span class="timer-suffix">s</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="kpi-info">
+                <div class="kpi-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <h3 class="kpi-title"><span data-target="320">0</span>s</h3>
+                <p class="kpi-desc">Average Handle Time</p>
+                <div class="kpi-trend down">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                  </svg>
+                  <span>-15s optimizado</span>
+                </div>
+              </div>
+              <div class="kpi-detail">
+                <p>Tiempo promedio de atención de 320 segundos, controlado mediante guiones optimizados y sistemas que reducen tiempos innecesarios sin sacrificar calidad.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTADÍSTICAS EN VIVO -->
+<section id="live-stats" class="live-stats-section section" aria-label="Estadísticas en vivo">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#40ffaa", "#4079ff", "#ff0088"]' data-speed="5">Operando Ahora Mismo - Karla Te amo</span>
+    </h2>
+    <p class="section-sub fade-up">Actividad en tiempo real de nuestra operación 24/7</p>
+
+    <div class="live-stats-grid fade-up">
+      <div class="live-stat-card">
+        <div class="stat-icon pulse">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-label">Llamadas hoy</div>
+          <div class="stat-number" id="calls-today">48,523</div>
+          <div class="stat-trend up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            </svg>
+            <span>+12% vs ayer</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="live-stat-card">
+        <div class="stat-icon pulse" style="animation-delay: 0.2s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-label">Agentes activos</div>
+          <div class="stat-number" id="agents-active">247</div>
+          <div class="stat-trend">
+            <span class="status-dot"></span>
+            <span>En línea ahora</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="live-stat-card">
+        <div class="stat-icon pulse" style="animation-delay: 0.4s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-label">Tiempo promedio</div>
+          <div class="stat-number" id="avg-time">312s</div>
+          <div class="stat-trend down">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+            </svg>
+            <span>-8s optimizado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="live-stat-card">
+        <div class="stat-icon pulse" style="animation-delay: 0.6s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </div>
+        <div class="stat-content">
+          <div class="stat-label">Satisfacción</div>
+          <div class="stat-number" id="satisfaction">94.2%</div>
+          <div class="stat-trend up">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            </svg>
+            <span>+0.3% hoy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="live-activity-feed fade-up">
+      <h3>Actividad Reciente</h3>
+      <div class="activity-list" id="activity-feed">
+        <div class="activity-item">
+          <div class="activity-icon">📞</div>
+          <div class="activity-text">
+            <strong>Llamada entrante</strong> - Atención al cliente
+          </div>
+          <div class="activity-time">hace 2 seg</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon">✅</div>
+          <div class="activity-text">
+            <strong>Caso resuelto</strong> - Soporte técnico
+          </div>
+          <div class="activity-time">hace 8 seg</div>
+        </div>
+        <div class="activity-item">
+          <div class="activity-icon">💬</div>
+          <div class="activity-text">
+            <strong>Chat iniciado</strong> - Consulta de ventas
+          </div>
+          <div class="activity-time">hace 12 seg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- TESTIMONIOS DE ASESORES Y USUARIOS -->
+    <section id="testimonios" class="testimonials section" aria-label="Testimonios">
+      <div class="container">
+        <h2 class="section-title fade-up">
+          <span class="gradient-text" data-colors='["#ff0088", "#8b5cf6", "#4079ff"]' data-speed="5">Lo que dicen nuestros colaboradores</span>
+        </h2>
+        <p class="section-sub fade-up">Historias reales de crecimiento y éxito.</p>
+
+        <div class="testimonials-grid" role="list">
+
+          <div class="testimonial-card fade-up rotate-in stagger-item" role="listitem">
+
+            <div class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/150?img=5" alt="María González" loading="lazy" />
+              <div class="avatar-badge">⭐</div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Entré como agente hace 2 años y ahora soy supervisora. KONTACTOYA invierte en tu crecimiento de verdad."</p>
+              <div class="testimonial-author">
+                <strong>María González</strong>
+                <span>Supervisora de Atención</span>
+              </div>
+              <div class="testimonial-rating">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up rotate-in stagger-item" role="listitem">
+
+            <div class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/150?img=12" alt="Carlos Ramírez" loading="lazy" />
+              <div class="avatar-badge">🏆</div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">"El ambiente es increíble. Te capacitan constantemente y los bonos por desempeño son reales."</p>
+              <div class="testimonial-author">
+                <strong>Carlos Ramírez</strong>
+                <span>Agente de Televentas</span>
+              </div>
+              <div class="testimonial-rating">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/150?img=32" alt="Ana Pérez" loading="lazy" />
+              <div class="avatar-badge">💼</div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Trabajo remoto con horarios flexibles. Perfecto para mamás como yo que buscamos balance."</p>
+              <div class="testimonial-author">
+                <strong>Ana Pérez</strong>
+                <span>Agente de Soporte</span>
+              </div>
+              <div class="testimonial-rating">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/150?img=68" alt="Jorge Mendoza - Cliente" loading="lazy" />
+              <div class="avatar-badge">🎯</div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Contratamos KONTACTOYA y nuestro CSAT subió 20%. Su equipo es profesional y comprometido."</p>
+              <div class="testimonial-author">
+                <strong>Jorge Mendoza</strong>
+                <span>Director de CX - TelCo</span>
+              </div>
+              <div class="testimonial-rating">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/150?img=41" alt="Laura Torres" loading="lazy" />
+              <div class="avatar-badge">💎</div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Los KPIs mejoraron en 3 meses. La tecnología que usan y el entrenamiento hacen la diferencia."</p>
+              <div class="testimonial-author">
+                <strong>Laura Torres</strong>
+                <span>Gerente de Operaciones - Retail</span>
+              </div>
+              <div class="testimonial-rating">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card fade-up" role="listitem">
+            <div class="testimonial-avatar">
+              <img src="https://i.pravatar.cc/150?img=15" alt="Roberto Silva" loading="lazy" />
+              <div class="avatar-badge">🚀</div>
+            </div>
+            <div class="testimonial-content">
+              <p class="testimonial-text">"Mejor outsourcing que hemos contratado. Reporting en tiempo real y resultados medibles."</p>
+              <div class="testimonial-author">
+                <strong>Roberto Silva</strong>
+                <span>CFO - Fintech</span>
+              </div>
+              <div class="testimonial-rating">
+                ⭐⭐⭐⭐⭐
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES CON LOGOS REALES -->
+    <section id="clientes" class="clients section fade-up">
+  <div class="container">
+    <h2 class="section-title">Empresas que confían en nosotros</h2>
+    <p class="section-sub">Aliados estratégicos en diversos sectores</p>
+    
+    <div class="client-logos">
+      <div class="logo-box" tabindex="0" data-company="Claro" data-desc="Líder en telecomunicaciones en América Latina con más de 70 millones de clientes">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Claro_logo.svg/320px-Claro_logo.svg.png" alt="Claro" />
+      </div>
+      <div class="logo-box" tabindex="0" data-company="Movistar" data-desc="Proveedor global de servicios de telecomunicaciones con presencia en 14 países">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Movistar_Logo.svg/320px-Movistar_Logo.svg.png" alt="Movistar" />
+      </div>
+      <div class="logo-box" tabindex="0" data-company="Vodafone" data-desc="Multinacional de telecomunicaciones con más de 300 millones de clientes en Europa">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vodafone_logo.svg/320px-Vodafone_logo.svg.png" alt="Vodafone" />
+      </div>
+    </div>
+
+    <div class="clients-detail">
+      <div class="client-info-card">
+        <h4 id="clientName">Nuestros Aliados</h4>
+        <p id="clientDesc">Pasa el cursor sobre un cliente para ver más información</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- TRABAJA CON NOSOTROS -->
+    <section id="trabaja" class="careers section">
+      <div class="container">
+        <h2 class="section-title fade-up">
+          <span class="gradient-text" data-colors='["#ff0088", "#ffaa00", "#4079ff"]' data-speed="5">Trabaja con nosotros</span>
+        </h2>
+        <p class="section-sub fade-up">Crecimiento profesional, capacitación y beneficios.</p>
+
+        <div class="careers-grid careers-grid--expanded">
+
+          <!-- IZQUIERDA: Reel + beneficios -->
+          <div class="careers-left fade-up">
+            <div class="reel reel-careers" id="reelCareers" aria-label="Reel de beneficios">
+              <div class="progress" id="reelProgressCareers" aria-hidden="true"></div>
+
+              <div class="slide active" data-title="Trabajo remoto" data-desc="Flexibilidad y modalidad híbrida según posición.">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80" alt="Trabajo remoto">
+              </div>
+              <div class="slide" data-title="Capacitación continua" data-desc="Programas de formación y coaching.">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1600&q=80" alt="Capacitación">
+              </div>
+              <div class="slide" data-title="Plan de carrera" data-desc="Promociones internas y rutas de desarrollo claras.">
+                <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80" alt="Carrera">
+              </div>
+              <div class="slide" data-title="Beneficios y seguro" data-desc="Cobertura complementaria y paquetes competitivos.">
+                <img src="https://images.unsplash.com/photo-1542223616-7b4799b8a9f0?auto=format&fit=crop&w=1600&q=80" alt="Beneficios">
+              </div>
+              <div class="slide" data-title="Ambiente colaborativo" data-desc="Equipos motivados y cultura de apoyo.">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80" alt="Equipo">
+              </div>
+
+              <button class="ctrl left" id="prevCareers" type="button" aria-label="Anterior">‹</button>
+              <button class="ctrl right" id="nextCareers" type="button" aria-label="Siguiente">›</button>
+
+              <div class="overlay">
+                <h3 id="reelCareersTitle">Trabajo remoto</h3>
+                <p id="reelCareersDesc">Flexibilidad y modalidad híbrida según posición.</p>
+              </div>
+            </div>
+
+            <ul class="benefits careers-benefits">
+              <li>Capacitación continua y certificaciones</li>
+              <li>Plan de carrera con crecimiento medible</li>
+              <li>Seguro complementario y beneficios sociales</li>
+              <li>Modalidad híbrida/remota según el puesto</li>
+            </ul>
+          </div>
+
+          <!-- DERECHA: Formulario -->
+          <div class="careers-right fade-up">
+            <form id="applyForm" class="apply-form careers-form careers-form--expanded" enctype="multipart/form-data">
+              <div class="form-inner form-grid">
+
+                <label class="field">
+                  <input name="fullname" id="fullname" type="text" placeholder="Nombre completo *" required />
+                </label>
+
+                <label class="field">
+                  <input name="email" id="email" type="email" placeholder="Correo *" required />
+                </label>
+
+                <label class="field">
+                  <input name="phone" id="phone" type="tel" placeholder="Teléfono *" required />
+                </label>
+
+                <label class="field">
+                  <select name="area" id="area" required>
+                    <option value="">Área de interés *</option>
+                    <option>Atención</option>
+                    <option>Televentas</option>
+                    <option>Backoffice</option>
+                    <option>QA</option>
+                    <option>Soporte Técnico</option>
+                  </select>
+                </label>
+
+                <label class="field field-full">
+                  <textarea id="whyWork" name="whyWork" rows="4" placeholder="¿Qué buscas en tu próximo trabajo?"></textarea>
+                </label>
+
+                <label class="field file-field field-half">
+                  <div class="file-ui-vertical">
+                    <button type="button" class="file-btn cta" id="cvBtn">Subir CV</button>
+                    <div id="cvFilename" class="file-name">PDF o DOC (máx 6 MB)</div>
+                  </div>
+                  <input id="cvFile" name="cvFile" type="file" accept=".pdf,.doc,.docx" style="display:none" />
+                </label>
+
+                <label class="field salary-field field-half">
+                  <div class="salary-row">
+                    <div class="salary-label">Salario esperado</div>
+                    <div id="salaryValue" class="salary-value">S/ 2,000</div>
+                  </div>
+                  <input id="salaryRange" name="salary" type="range" min="1130" max="4000" step="10" value="2000" />
+                  <div id="salaryMsg" class="salary-msg">Comienza tu camino profesional.</div>
+                </label>
+
+                <div class="field field-full">
+                  <button class="cta cta--wide glow" type="submit">Enviar postulación</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO MEJORADO CON GOOGLE MAPS -->
+    <section id="contacto" class="contact section" aria-label="Contacto">
+      <div class="container">
+        <h2 class="section-title fade-up">
+          <span class="gradient-text" data-colors='["#ff0088", "#ff66cc", "#8b5cf6"]' data-speed="5">¿Listo para transformar tu experiencia del cliente?</span>
+        </h2>
+        <p class="section-sub fade-up">Contáctanos y descubre cómo podemos mejorar tu operación.</p>
+
+        <div class="contact-grid">
+
+          <!-- FORMULARIO -->
+          <div class="contact-left fade-up">
+            <form id="contactForm" class="contact-form glass-form">
+              <div class="form-row">
+                <input name="name" type="text" placeholder="Tu nombre / empresa *" required />
+                <input name="email" type="email" placeholder="Correo *" required />
+              </div>
+
+              <div class="form-row">
+                <input name="phone" type="tel" placeholder="Teléfono *" required />
+                <select name="service" required>
+                  <option value="">Servicio requerido *</option>
+                  <option>Atención al Cliente 24/7</option>
+                  <option>Televentas & Retención</option>
+                  <option>Gestión de Cobranza</option>
+                  <option>BPO Completo</option>
+                  <option>Consultoría CX</option>
+                </select>
+              </div>
+
+              <textarea name="message" placeholder="Cuéntanos tu necesidad y te enviaremos una propuesta personalizada *" rows="6" required></textarea>
+
+              <div class="contact-cta-row">
+                <button class="cta neon glow" type="submit">
+                  <svg viewBox="0 0 72 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+            Enviar solicitud
+                </button>
+                <p class="contact-note">Respuesta en menos de 24 horas</p>
+              </div>
+            </form>
+
+            <!-- INFO DE CONTACTO -->
+            <div class="contact-info">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Oficina Principal</strong>
+                  <p>Av. Javier Prado Este 4200, San Isidro, Lima, Perú</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Teléfono</strong>
+                  <p>+51 987 654 321</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <p>contacto@kontactoya.com</p>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon whatsapp-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                  </svg>
+                </div>
+                <div>
+                  <strong>WhatsApp Business</strong>
+                  <a href="https://wa.me/51987654321?text=Hola%20KONTACTOYA%2C%20quiero%20información" target="_blank" class="whatsapp-link">
+                    Chatear ahora →
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GOOGLE MAPS EMBED MEJORADO -->
+          <div class="contact-right fade-up">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.3076453891644!2d-77.02777708461668!3d-12.091498345406947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c86619bbf47f%3A0x267c3a2a5d194d3d!2sAv.%20Javier%20Prado%20Este%2C%20San%20Isidro%2C%20Lima%2C%20Peru!5e0!3m2!1sen!2sus!4v1234567890123"
+                width="100%"
+                height="100%"
+                style="border:0;border-radius:var(--radius-lg);"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación KONTACTOYA">
+              </iframe>
+              <div class="map-overlay">
+                <div class="map-pin">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Botón Ver en Google Maps -->
+            <a href="https://maps.app.goo.gl/YVC6RAsRotydGbJg8" target="_blank" rel="noopener" class="map-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Ver en Google Maps
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+      <!-- CASOS DE ÉXITO -->
+<section id="casos-exito" class="case-studies section" aria-label="Casos de éxito">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#ff0088", "#4079ff", "#40ffaa"]' data-speed="5">Casos de Éxito</span>
+    </h2>
+    <p class="section-sub fade-up">Resultados reales que transformaron negocios</p>
+
+    <div class="case-grid">
+      <div class="case-card fade-up stagger-item">
+        <div class="case-header">
+          <div class="case-logo">📡</div>
+          <span class="case-industry">Telecomunicaciones</span>
+        </div>
+        <h3>Reducción del 40% en tiempo de respuesta</h3>
+        <p>Cliente líder en telecom implementó nuestro sistema 24/7, optimizando procesos y mejorando satisfacción del cliente dramáticamente.</p>
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-value" data-value="40">0</div>
+            <div class="metric-label">% menos AHT</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-value="25">0</div>
+            <div class="metric-label">% más CSAT</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-value="18">0</div>
+            <div class="metric-label">% más ventas</div>
+          </div>
+        </div>
+        <button class="case-btn cta" onclick="alert('Caso de éxito completo: Contacta con nosotros para más detalles')">Ver caso completo</button>
+      </div>
+
+      <div class="case-card fade-up stagger-item">
+        <div class="case-header">
+          <div class="case-logo">💳</div>
+          <span class="case-industry">Finanzas</span>
+        </div>
+        <h3>Incremento del 35% en recuperación de cartera</h3>
+        <p>Fintech implementó estrategia de cobranza humanizada, mejorando tasas de recuperación sin afectar NPS.</p>
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-value" data-value="35">0</div>
+            <div class="metric-label">% recuperación</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-value="50">0</div>
+            <div class="metric-label">% menos quejas</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-value="92">0</div>
+            <div class="metric-label">NPS Score</div>
+          </div>
+        </div>
+        <button class="case-btn cta" onclick="alert('Caso de éxito completo: Contacta con nosotros para más detalles')">Ver caso completo</button>
+      </div>
+
+      <div class="case-card fade-up stagger-item">
+        <div class="case-header">
+          <div class="case-logo">🛍️</div>
+          <span class="case-industry">Retail</span>
+        </div>
+        <h3>Conversión mejorada en 28% con televentas</h3>
+        <p>Cadena retail escaló operación comercial con scripts optimizados y seguimiento CRM integrado.</p>
+        <div class="case-metrics">
+          <div class="metric">
+            <div class="metric-value" data-value="28">0</div>
+            <div class="metric-label">% conversión</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-value="45">0</div>
+            <div class="metric-label">% más leads</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value" data-value="3">0</div>
+            <div class="metric-label">x ROI</div>
+          </div>
+        </div>
+        <button class="case-btn cta" onclick="alert('Caso de éxito completo: Contacta con nosotros para más detalles')">Ver caso completo</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CALCULADORA ROI -->
+<section id="roi-calculator" class="calculator-section section" aria-label="Calculadora de ROI">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#40ffaa", "#4079ff", "#ff0088"]' data-speed="5">Calcula tu ROI</span>
+    </h2>
+    <p class="section-sub fade-up">Descubre cuánto puedes ahorrar con KONTACTOYA</p>
+
+    <div class="calculator-wrapper fade-up">
+      <div class="calc-form">
+        <div class="calc-input-group">
+          <label for="monthly-calls">
+            <span class="calc-label">📞 Llamadas mensuales</span>
+            <input type="number" id="monthly-calls" value="10000" min="100" step="100">
+          </label>
+
+          <label for="current-cost">
+            <span class="calc-label">💰 Costo actual por llamada (S/)</span>
+            <input type="number" id="current-cost" value="5" min="1" step="0.5">
+          </label>
+
+          <label for="agent-count">
+            <span class="calc-label">👥 Número de agentes actuales</span>
+            <input type="number" id="agent-count" value="20" min="1" step="1">
+          </label>
+        </div>
+
+        <div class="calc-results">
+          <div class="result-card main-result">
+            <div class="result-icon">💎</div>
+            <div class="result-content">
+              <h3>Ahorro Mensual Estimado</h3>
+              <div class="result-value" id="monthly-savings">S/ 15,000</div>
+              <p class="result-note">Basado en optimización del 30%</p>
+            </div>
+          </div>
+
+          <div class="result-grid">
+            <div class="result-card">
+              <div class="result-label">Ahorro Anual</div>
+              <div class="result-value small" id="yearly-savings">S/ 180,000</div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">ROI en</div>
+              <div class="result-value small" id="roi-months">3 meses</div>
+            </div>
+            <div class="result-card">
+              <div class="result-label">Eficiencia</div>
+              <div class="result-value small">+30%</div>
+            </div>
+          </div>
+
+          <button class="cta calc-cta glow" onclick="scrollToSection('contacto')">
+            Solicitar propuesta personalizada
+          </button>
+        </div>
+      </div>
+
+      <div class="calc-visual">
+        <canvas id="roiChart" width="400" height="400"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ ACCORDION -->
+<section id="faq" class="faq-section section" aria-label="Preguntas frecuentes">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#ff0088", "#8b5cf6", "#4079ff"]' data-speed="5">Preguntas Frecuentes</span>
+    </h2>
+    <p class="section-sub fade-up">Todo lo que necesitas saber sobre nuestros servicios</p>
+
+    <div class="faq-accordion fade-up">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cuál es el tiempo mínimo de contrato?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Nuestros contratos son flexibles desde <strong>6 meses</strong>. Ofrecemos planes escalables que se adaptan al crecimiento de tu negocio, con opciones de renovación automática y sin penalizaciones por expansión de servicios.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué incluye el servicio 24/7?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>El servicio 24/7 incluye: <strong>atención multicanal</strong> (teléfono, chat, email, WhatsApp), <strong>agentes dedicados</strong>, supervisión en tiempo real, reportes diarios/semanales, grabación de llamadas, QA continuo y acceso a dashboard con métricas en vivo.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cómo garantizan la calidad del servicio?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Garantizamos calidad mediante: <strong>SLAs contractuales</strong> con penalizaciones si no se cumplen, monitoreo aleatorio del 100% de interacciones, coaching semanal, certificaciones ISO 9001 y 27001, y auditorías trimestrales con reportes detallados.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cuánto tiempo toma la implementación?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>La implementación estándar toma <strong>2-3 semanas</strong>: Semana 1: Discovery y diseño de procesos. Semana 2: Capacitación de agentes y configuración de sistemas. Semana 3: Go-live supervisado con acompañamiento 24/7.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Ofrecen servicios en otros idiomas?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Sí, ofrecemos atención en <strong>español</strong> (nativo), <strong>inglés</strong> (nivel bilingüe certificado) y <strong>portugués</strong> (Brasil). Nuestros agentes multilingües están disponibles para operaciones internacionales.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Cómo manejan la seguridad de datos?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Contamos con <strong>certificación ISO 27001</strong>, encriptación end-to-end, cumplimiento GDPR/LGPD, accesos controlados con autenticación multifactor, auditorías de seguridad trimestrales y acuerdos de confidencialidad (NDA) con todo el personal.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Puedo escalar el servicio según la demanda?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Totalmente. Ofrecemos <strong>escalabilidad flexible</strong> con avisos de 7 días para aumento de capacidad hasta 50%, y 14 días para incrementos mayores. Ideal para campañas estacionales, lanzamientos de productos o picos de demanda.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">
+          <span>¿Qué métricas puedo monitorear en tiempo real?</span>
+          <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+        <div class="faq-answer">
+          <p>Nuestro dashboard en tiempo real muestra: <strong>llamadas en curso</strong>, tiempo de espera promedio, tasa de abandono, CSAT en vivo, FCR, AHT, ocupación de agentes, y alertas automáticas cuando los KPIs caen fuera del rango acordado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESO DE IMPLEMENTACIÓN -->
+<section id="proceso" class="timeline-section section" aria-label="Proceso de implementación">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#ff0088", "#ffaa00", "#40ffaa"]' data-speed="5">Proceso de Implementación</span>
+    </h2>
+    <p class="section-sub fade-up">En solo 3 semanas estarás operativo con resultados medibles</p>
+
+    <div class="timeline">
+      <div class="timeline-item fade-up stagger-item">
+        <div class="timeline-dot">1</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semana 1</div>
+          <h3>Discovery & Diseño</h3>
+          <p>Análisis profundo de necesidades, definición de KPIs, diseño de procesos y flujos de atención personalizados.</p>
+          <ul class="timeline-checklist">
+            <li>✓ Kick-off meeting</li>
+            <li>✓ Mapeo de procesos</li>
+            <li>✓ Definición de SLAs</li>
+            <li>✓ Diseño de scripts</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up stagger-item">
+        <div class="timeline-dot">2</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semana 2</div>
+          <h3>Capacitación & Setup</h3>
+          <p>Entrenamiento intensivo del equipo, configuración de sistemas, integración CRM y pruebas de calidad.</p>
+          <ul class="timeline-checklist">
+            <li>✓ Capacitación de agentes</li>
+            <li>✓ Configuración técnica</li>
+            <li>✓ Integración de sistemas</li>
+            <li>✓ Testing QA</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up stagger-item">
+        <div class="timeline-dot">3</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Semana 3</div>
+          <h3>Go-Live Supervisado</h3>
+          <p>Lanzamiento en producción con acompañamiento 24/7, monitoreo intensivo y ajustes en tiempo real.</p>
+          <ul class="timeline-checklist">
+            <li>✓ Lanzamiento controlado</li>
+            <li>✓ Soporte 24/7</li>
+            <li>✓ Monitoreo intensivo</li>
+            <li>✓ Optimización continua</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-up stagger-item success">
+        <div class="timeline-dot">✓</div>
+        <div class="timeline-content">
+          <div class="timeline-week">Mes 1+</div>
+          <h3>Operación & Mejora Continua</h3>
+          <p>Operación estable con reportes semanales, coaching continuo y optimización basada en datos.</p>
+          <ul class="timeline-checklist">
+            <li>✓ Reportes semanales</li>
+            <li>✓ Coaching permanente</li>
+            <li>✓ A/B testing</li>
+            <li>✓ Escalamiento flexible</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-cta fade-up">
+      <button class="cta glow" onclick="scrollToSection('contacto')">
+        Empezar mi implementación
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ANTES/DESPUÉS -->
+<section id="before-after" class="comparison-section section" aria-label="Comparativa">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#ff0088", "#8b5cf6", "#4079ff"]' data-speed="5">El Antes y Después</span>
+    </h2>
+    <p class="section-sub fade-up">Transforma tu operación con resultados medibles</p>
+
+    <div class="comparison-wrapper fade-up">
+      <div class="comparison-card before">
+        <div class="comparison-header">
+          <div class="comparison-icon sad">😰</div>
+          <h3>Antes de KONTACTOYA</h3>
+        </div>
+        <ul class="comparison-list">
+          <li class="negative">
+            <span class="icon">❌</span>
+            <div class="content">
+              <strong>CSAT 70%</strong>
+              <p>Clientes insatisfechos con tiempos de espera</p>
+            </div>
+          </li>
+          <li class="negative">
+            <span class="icon">❌</span>
+            <div class="content">
+              <strong>AHT 450 segundos</strong>
+              <p>Procesos ineficientes y sin optimizar</p>
+            </div>
+          </li>
+          <li class="negative">
+            <span class="icon">❌</span>
+            <div class="content">
+              <strong>Abandono 15%</strong>
+              <p>Alta tasa de llamadas perdidas</p>
+            </div>
+          </li>
+          <li class="negative">
+            <span class="icon">❌</span>
+            <div class="content">
+              <strong>FCR 65%</strong>
+              <p>Múltiples contactos para resolver casos</p>
+            </div>
+          </li>
+          <li class="negative">
+            <span class="icon">❌</span>
+            <div class="content">
+              <strong>Sin visibilidad</strong>
+              <p>Reportes manuales y desactualizados</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="comparison-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </div>
+
+      <div class="comparison-card after">
+        <div class="comparison-header">
+          <div class="comparison-icon happy">🚀</div>
+          <h3>Con KONTACTOYA</h3>
+        </div>
+        <ul class="comparison-list">
+          <li class="positive">
+            <span class="icon">✅</span>
+            <div class="content">
+              <strong>CSAT 94%</strong>
+              <p>Clientes satisfechos y leales</p>
+            </div>
+          </li>
+          <li class="positive">
+            <span class="icon">✅</span>
+            <div class="content">
+              <strong>AHT 320 segundos</strong>
+              <p>Procesos optimizados y eficientes</p>
+            </div>
+          </li>
+          <li class="positive">
+            <span class="icon">✅</span>
+            <div class="content">
+              <strong>Abandono 3%</strong>
+              <p>Atención inmediata y efectiva</p>
+            </div>
+          </li>
+          <li class="positive">
+            <span class="icon">✅</span>
+            <div class="content">
+              <strong>FCR 90%</strong>
+              <p>Resolución en primer contacto</p>
+            </div>
+          </li>
+          <li class="positive">
+            <span class="icon">✅</span>
+            <div class="content">
+              <strong>Dashboard en vivo</strong>
+              <p>Métricas actualizadas en tiempo real</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="comparison-stats fade-up">
+      <div class="stat-card">
+        <div class="stat-value">+34%</div>
+        <div class="stat-label">Mejora en CSAT</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">-29%</div>
+        <div class="stat-label">Reducción de AHT</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">-80%</div>
+        <div class="stat-label">Menos abandono</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">+38%</div>
+        <div class="stat-label">Más FCR</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARADOR DE PLANES -->
+<section id="planes" class="pricing-section section" aria-label="Planes y precios">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#ff0088", "#8b5cf6", "#4079ff"]' data-speed="5">Elige tu Plan Ideal</span>
+    </h2>
+    <p class="section-sub fade-up">Soluciones escalables para cada etapa de tu negocio</p>
+
+    <!-- Toggle de facturación -->
+    <div class="billing-toggle fade-up">
+      <span class="toggle-label">Mensual</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="billing-toggle">
+        <span class="toggle-slider"></span>
+      </label>
+      <span class="toggle-label">Anual <span class="discount-badge">-20%</span></span>
+    </div>
+
+    <div class="pricing-grid fade-up">
+      <!-- Plan Starter -->
+      <div class="pricing-card starter">
+        <div class="plan-badge">Ideal para empezar</div>
+        <div class="plan-header">
+          <h3 class="plan-name">Starter</h3>
+          <div class="plan-price">
+            <span class="currency">S/</span>
+            <span class="amount" data-monthly="2,499" data-yearly="1,999">2,499</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="plan-desc">Perfecto para startups y pequeñas empresas</p>
+        </div>
+
+        <ul class="plan-features">
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span><strong>Hasta 5,000</strong> llamadas/mes</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span><strong>5 agentes</strong> dedicados</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Atención <strong>12/7</strong></span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>2 canales (teléfono + email)</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Dashboard básico</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Reportes semanales</span>
+          </li>
+          <li class="excluded">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>WhatsApp Business</span>
+          </li>
+          <li class="excluded">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Integración CRM</span>
+          </li>
+        </ul>
+
+        <button class="plan-cta cta" onclick="selectPlan('Starter')">
+          Elegir Starter
+        </button>
+      </div>
+
+      <!-- Plan Professional (Popular) -->
+      <div class="pricing-card professional popular">
+        <div class="popular-badge">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          Más Popular
+        </div>
+        <div class="plan-badge">Recomendado</div>
+        <div class="plan-header">
+          <h3 class="plan-name">Professional</h3>
+          <div class="plan-price">
+            <span class="currency">S/</span>
+            <span class="amount" data-monthly="4,999" data-yearly="3,999">4,999</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="plan-desc">Para empresas en crecimiento</p>
+        </div>
+
+        <ul class="plan-features">
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span><strong>Hasta 20,000</strong> llamadas/mes</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span><strong>15 agentes</strong> dedicados</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Atención <strong>24/7</strong></span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>4 canales (teléfono, email, chat, WhatsApp)</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Dashboard avanzado en tiempo real</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Reportes diarios</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>WhatsApp Business API</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Integración CRM incluida</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Quality Assurance</span>
+          </li>
+          <li class="excluded">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+            <span>Account Manager dedicado</span>
+          </li>
+        </ul>
+
+        <button class="plan-cta cta glow" onclick="selectPlan('Professional')">
+          Elegir Professional
+        </button>
+      </div>
+
+      <!-- Plan Enterprise -->
+      <div class="pricing-card enterprise">
+        <div class="plan-badge">Máximo poder</div>
+        <div class="plan-header">
+          <h3 class="plan-name">Enterprise</h3>
+          <div class="plan-price">
+            <span class="currency">S/</span>
+            <span class="amount" data-monthly="9,999" data-yearly="7,999">9,999</span>
+            <span class="period">/mes</span>
+          </div>
+          <p class="plan-desc">Para grandes operaciones</p>
+        </div>
+
+        <ul class="plan-features">
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span><strong>Llamadas ilimitadas</strong></span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span><strong>50+ agentes</strong> escalables</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Atención <strong>24/7</strong> multi-país</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Todos los canales + redes sociales</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Dashboard personalizado con BI</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Reportes en tiempo real + API</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Integración completa de sistemas</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>QA avanzado con IA</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Account Manager dedicado 24/7</span>
+          </li>
+          <li class="included">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>SLA personalizado con penalizaciones</span>
+          </li>
+        </ul>
+
+        <button class="plan-cta cta" onclick="selectPlan('Enterprise')">
+          Elegir Enterprise
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabla comparativa detallada -->
+    <div class="comparison-table-wrapper fade-up">
+      <button class="toggle-comparison" id="toggle-comparison">
+        <span>Ver comparación detallada</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+
+      <div class="comparison-table" id="comparison-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th>Starter</th>
+              <th>Professional</th>
+              <th>Enterprise</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Llamadas mensuales</strong></td>
+              <td>5,000</td>
+              <td>20,000</td>
+              <td>Ilimitadas</td>
+            </tr>
+            <tr>
+              <td><strong>Agentes dedicados</strong></td>
+              <td>5</td>
+              <td>15</td>
+              <td>50+</td>
+            </tr>
+            <tr>
+              <td><strong>Horario de atención</strong></td>
+              <td>12/7</td>
+              <td>24/7</td>
+              <td>24/7 Multi-país</td>
+            </tr>
+            <tr>
+              <td><strong>Canales</strong></td>
+              <td>2 (teléfono, email)</td>
+              <td>4 (incluye WhatsApp)</td>
+              <td>Todos + RRSS</td>
+            </tr>
+            <tr>
+              <td><strong>CRM Integration</strong></td>
+              <td>❌</td>
+              <td>✅ Básica</td>
+              <td>✅ Completa + API</td>
+            </tr>
+            <tr>
+              <td><strong>Dashboard</strong></td>
+              <td>Básico</td>
+              <td>Avanzado en vivo</td>
+              <td>Personalizado con BI</td>
+            </tr>
+            <tr>
+              <td><strong>Reportes</strong></td>
+              <td>Semanales</td>
+              <td>Diarios</td>
+              <td>Tiempo real + API</td>
+            </tr>
+            <tr>
+              <td><strong>Quality Assurance</strong></td>
+              <td>Básico</td>
+              <td>✅ Incluido</td>
+              <td>✅ Avanzado con IA</td>
+            </tr>
+            <tr>
+              <td><strong>Account Manager</strong></td>
+              <td>❌</td>
+              <td>Compartido</td>
+              <td>Dedicado 24/7</td>
+            </tr>
+            <tr>
+              <td><strong>SLA Garantizado</strong></td>
+              <td>Estándar</td>
+              <td>Premium</td>
+              <td>Personalizado</td>
+            </tr>
+            <tr>
+              <td><strong>Tiempo de implementación</strong></td>
+              <td>2 semanas</td>
+              <td>3 semanas</td>
+              <td>4 semanas</td>
+            </tr>
+            <tr>
+              <td><strong>Soporte técnico</strong></td>
+              <td>Email</td>
+              <td>Email + Chat</td>
+              <td>24/7 Prioritario</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FAQ de planes -->
+    <div class="pricing-faq fade-up">
+      <h3>¿Tienes dudas sobre los planes?</h3>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <div class="faq-icon">💡</div>
+          <h4>¿Puedo cambiar de plan?</h4>
+          <p>Sí, puedes escalar o reducir tu plan con 30 días de aviso sin penalización.</p>
+        </div>
+        <div class="faq-card">
+          <div class="faq-icon">🔄</div>
+          <h4>¿Hay contrato mínimo?</h4>
+          <p>El contrato mínimo es de 6 meses, renovable automáticamente.</p>
+        </div>
+        <div class="faq-card">
+          <div class="faq-icon">📊</div>
+          <h4>¿Qué incluye el dashboard?</h4>
+          <p>Métricas en tiempo real: CSAT, AHT, FCR, abandono y más.</p>
+        </div>
+        <div class="faq-card">
+          <div class="faq-icon">🎯</div>
+          <h4>¿Ofrecen plan personalizado?</h4>
+          <p>Sí, contáctanos para un plan a medida de tu operación.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CERTIFICACIONES Y PREMIOS -->
+<section id="certificaciones" class="awards-section section" aria-label="Certificaciones y premios">
+  <div class="container">
+    <h2 class="section-title fade-up">
+      <span class="gradient-text" data-colors='["#ffaa00", "#ff0088", "#8b5cf6"]' data-speed="5">Certificaciones y Reconocimientos</span>
+    </h2>
+    <p class="section-sub fade-up">Respaldados por los más altos estándares de calidad y seguridad</p>
+
+    <div class="awards-grid fade-up">
+      <div class="award-card scale-in stagger-item">
+        <div class="award-badge">
+          <div class="award-icon">🏆</div>
+        </div>
+        <h3>ISO 9001:2015</h3>
+        <p class="award-category">Gestión de Calidad</p>
+        <p class="award-desc">Sistema de gestión certificado para garantizar la excelencia en todos nuestros procesos y servicios.</p>
+        <div class="award-year">Certificado desde 2020</div>
+      </div>
+
+      <div class="award-card scale-in stagger-item">
+        <div class="award-badge security">
+          <div class="award-icon">🔒</div>
+        </div>
+        <h3>ISO 27001:2013</h3>
+        <p class="award-category">Seguridad de Información</p>
+        <p class="award-desc">Protección garantizada de datos con los más altos estándares internacionales de seguridad.</p>
+        <div class="award-year">Certificado desde 2021</div>
+      </div>
+
+      <div class="award-card scale-in stagger-item">
+        <div class="award-badge compliance">
+          <div class="award-icon">✓</div>
+        </div>
+        <h3>GDPR Compliant</h3>
+        <p class="award-category">Protección de Datos</p>
+        <p class="award-desc">100% cumplimiento con normativas europeas de privacidad y protección de datos personales.</p>
+        <div class="award-year">Verificado 2023</div>
+      </div>
+
+      <div class="award-card scale-in stagger-item">
+        <div class="award-badge excellence">
+          <div class="award-icon">⭐</div>
+        </div>
+        <h3>Great Place to Work</h3>
+        <p class="award-category">Excelencia Laboral</p>
+        <p class="award-desc">Reconocidos como uno de los mejores lugares para trabajar en el sector BPO de LATAM.</p>
+        <div class="award-year">2024</div>
+      </div>
+
+      <div class="award-card scale-in stagger-item">
+        <div class="award-badge innovation">
+          <div class="award-icon">💡</div>
+        </div>
+        <h3>Best Contact Center</h3>
+        <p class="award-category">Innovación Tecnológica</p>
+        <p class="award-desc">Premio a la mejor implementación de IA y automatización en contact centers 2024.</p>
+        <div class="award-year">LATAM Awards 2024</div>
+      </div>
+
+      <div class="award-card scale-in stagger-item">
+        <div class="award-badge partner">
+          <div class="award-icon">🤝</div>
+        </div>
+        <h3>Salesforce Partner</h3>
+        <p class="award-category">Partner Certificado</p>
+        <p class="award-desc">Socio oficial certificado con especialización en Service Cloud y integración CRM.</p>
+        <div class="award-year">Partner desde 2022</div>
+      </div>
+    </div>
+
+    <!-- Logos de partners -->
+    <div class="partners-section fade-up">
+      <h3>Tecnologías y Partners</h3>
+      <div class="partners-logos">
+        <div class="partner-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/320px-Salesforce.com_logo.svg.png" alt="Salesforce">
+        </div>
+        <div class="partner-logo">
+          <span class="partner-text">Zendesk</span>
+        </div>
+        <div class="partner-logo">
+          <span class="partner-text">Twilio</span>
+        </div>
+        <div class="partner-logo">
+          <span class="partner-text">AWS</span>
+        </div>
+        <div class="partner-logo">
+          <span class="partner-text">Microsoft</span>
+        </div>
+        <div class="partner-logo">
+          <span class="partner-text">HubSpot</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="newsletter-section section" aria-label="Newsletter">
+  <div class="container">
+    <div class="newsletter-wrapper fade-up">
+      <div class="newsletter-content">
+        <div class="newsletter-icon">📧</div>
+        <h2>¿Quieres mejorar tu Contact Center?</h2>
+        <p>Suscríbete y recibe <strong>GRATIS</strong> nuestro whitepaper: <em>"10 KPIs que Todo Contact Center Debe Medir"</em></p>
+        
+        <form id="newsletter-form" class="newsletter-form">
+          <div class="form-row-newsletter">
+            <input 
+              type="email" 
+              id="newsletter-email" 
+              placeholder="tu@email.com" 
+              required
+              aria-label="Email para newsletter"
+            >
+            <button type="submit" class="cta glow">
+              <span>Descargar Gratis</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </button>
+          </div>
+          <p class="newsletter-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            100% seguro. Sin spam. Puedes darte de baja cuando quieras.
+          </p>
+        </form>
+
+        <div class="newsletter-benefits">
+          <div class="benefit-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Whitepaper exclusivo de 25 páginas</span>
+          </div>
+          <div class="benefit-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Tips semanales de optimización</span>
+          </div>
+          <div class="benefit-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Acceso a webinars exclusivos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="newsletter-preview">
+        <div class="mockup-document">
+          <div class="document-header">
+            <div class="document-icon">📊</div>
+            <div class="document-title">
+              <h4>10 KPIs Esenciales</h4>
+              <p>Whitepaper Exclusivo</p>
+            </div>
+          </div>
+          <div class="document-body">
+            <div class="document-line"></div>
+            <div class="document-line short"></div>
+            <div class="document-line"></div>
+            <div class="document-line medium"></div>
+            <div class="document-chart">
+              <div class="chart-bar" style="height: 60%"></div>
+              <div class="chart-bar" style="height: 85%"></div>
+              <div class="chart-bar" style="height: 70%"></div>
+              <div class="chart-bar" style="height: 95%"></div>
+            </div>
+            <div class="document-line"></div>
+            <div class="document-line short"></div>
+          </div>
+          <div class="document-footer">
+            <div class="pdf-badge">PDF</div>
+            <span>25 páginas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats de suscriptores -->
+    <div class="newsletter-stats fade-up">
+      <div class="stat-item">
+        <div class="stat-number">12,500+</div>
+        <div class="stat-label">Suscriptores activos</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.9/5</div>
+        <div class="stat-label">Valoración promedio</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">95%</div>
+        <div class="stat-label">Tasa de apertura</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-left">
+        <div class="footer-logo gradient-text" data-colors='["#ff0088", "#ff66cc", "#8b5cf6"]'>KONTACTOYA</div>
+        <p>Experiencias que conectan, resultados que transforman.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/kontactoya" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/51987654321" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://facebook.com/kontactoya" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#servicios">Atención 24/7</a></li>
+            <li><a href="#servicios">Televentas</a></li>
+            <li><a href="#servicios">Cobranza</a></li>
+            <li><a href="#servicios">BPO</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#kpis">Resultados</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#trabaja">Trabaja con nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Protección de Datos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 KONTACTOYA — Todos los derechos reservados.</p>
+      <p class="small">Lima, Perú | contacto@kontactoya.com</p>
+    </div>
+  </footer>
+
+  <!-- CHATBOT FLOTANTE -->
+  <div id="chatbot" class="chatbot" aria-label="Asistente virtual">
+    <button id="chatbot-toggle" class="chatbot-toggle" aria-label="Abrir chat">
+      <svg class="icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+      <span class="chatbot-badge">1</span>
+    </button>
+
+    <div id="chatbot-window" class="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-avatar">
+          <img src="https://i.pravatar.cc/80?img=48" alt="Asistente KY" />
+          <span class="status-dot"></span>
+        </div>
+        <div class="chatbot-info">
+          <strong>Asistente KY</strong>
+          <span>En línea • Responde en segundos</span>
+        </div>
+        <button class="chatbot-close" aria-label="Cerrar chat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="message bot">
+          <div class="message-avatar">
+            <img src="https://i.pravatar.cc/40?img=48" alt="Bot" />
+          </div>
+          <div class="message-content">
+            <p>¡Hola! 👋 Soy el asistente virtual de KONTACTOYA.</p>
+            <p>¿En qué puedo ayudarte hoy?</p>
+            <span class="message-time">Ahora</span>
+          </div>
+        </div>
+
+        <div class="quick-replies">
+          <button class="quick-reply" data-message="Quiero información sobre servicios">
+            💼 Servicios
+          </button>
+          <button class="quick-reply" data-message="Quiero una cotización">
+            📊 Cotización
+          </button>
+          <button class="quick-reply" data-message="Quiero trabajar con ustedes">
+            👥 Trabaja con nosotros
+          </button>
+          <button class="quick-reply" data-message="Quiero hablar con un asesor">
+            📞 Hablar con asesor
+          </button>
+        </div>
+      </div>
+
+      <form id="chatbot-form" class="chatbot-form">
+        <input
+          type="text"
+          id="chatbot-input"
+          placeholder="Escribe tu mensaje..."
+          autocomplete="off"
+          aria-label="Mensaje"
+        />
+        <button type="submit" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+<!-- FLOATING ACTION BUTTONS -->
+  <div class="floating-actions">
+    <button class="fab-btn" id="fab-whatsapp" aria-label="Chat por WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      <span class="fab-tooltip">Chatea con nosotros</span>
+    </button>
+
+    <button class="fab-btn" id="fab-call" aria-label="Llamar ahora">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      </svg>
+      <span class="fab-tooltip">+51 987 654 321</span>
+    </button>
+
+    <button class="fab-btn" id="fab-email" aria-label="Enviar email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span class="fab-tooltip">Enviar email</span>
+    </button>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
